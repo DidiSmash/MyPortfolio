@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ABC1E5;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #9EB6DC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Logo */
+
+.logo {
+    font-size: 32px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Nav Bar */
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Switch mode button */
+
+.switcher {
+    padding: 15px;
+    display: flex;
+    justify-content: right;
+}
+
+.button {
+    background-color: #d2d2d2;
+    width: 50px;
+    height: 25px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+input:checked + .button{
+    background-color: #20096d;
+}
+
+input:checked + .button::before{
+    transform: translateX(25px);
+}
+
+input {
+    display: none;
+}
