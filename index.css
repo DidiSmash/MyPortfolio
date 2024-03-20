@@ -6,12 +6,11 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 150vh;
     background-color: #ABC1E5;
 }
 
 header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -41,6 +40,14 @@ header {
     font-weight: 500;
     text-decoration: none;
     margin-right: 40px;
+}
+
+.navbar .logo {
+    font-size: 32px;
+    margin: 100px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 .navbar a::before {
@@ -97,4 +104,88 @@ input:checked + .button::before{
 
 input {
     display: none;
+}
+
+/*Menu*/
+.menu {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcomeMessage {
+    margin-top: 50px;
+    margin-right: 200px;
+    background-color: hsla(76, 96%, 41%, .4);
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+.menu h1 {
+    text-align: center;
+    font-weight: medium;
+    padding: 25px;
+    font-size: 48px;
+}
+
+.menu h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.menu button {
+    background-color: #97CC04;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 25px;
+    height: 50px;
+    width: 200px;
+    transition: .3s;
+}
+
+.menu button:hover {
+    background-color: #9ed603;
+}
+
+.menu img {
+    width: 375px;
+}
+
+/*Footer*/
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 100px;
+    background-color: #9EB6DC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+hr {
+    margin: 25px;
+    width: 90%;
+    height: 5%;
+}
+
+.media{
+    margin-bottom: 75px;
+    margin-right: 3%;
+}
+
+.media a {
+    margin: 25px;
+}
+
+.media a img {
+    height: 50px;
 }
