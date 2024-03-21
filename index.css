@@ -157,6 +157,183 @@ input {
     width: 375px;
 }
 
+/*About*/
+
+.about {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about h2{
+    font-size: 32px;
+}
+
+.about p{
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+}
+
+/*Skills*/
+.skills {
+    min-height: 50vh;
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+}
+.icons img {
+    position: absolute;
+    height: 100px;
+}
+
+.icons #js {
+    left: 48%;
+    margin-top: -250px;
+}
+
+.icons #html {
+    left: 40%;
+    margin-top: -200px;
+}
+
+.icons #css {
+    left: 56%;
+    margin-top: -200px;
+}
+
+.icons #py {
+    left: 37%;
+    margin-top: -50px;
+}
+
+.icons #php {
+    left: 59%;
+    margin-top: -50px;
+}
+
+.icons #c {
+    left: 40%;
+    margin-top: 100px;
+    height: 125px;
+}
+
+.icons #sql {
+    left: 56%;
+    margin-top: 100px;
+}
+
+.icons #godot {
+    left: 48%;
+    margin-top: 150px;
+}
+
+/*Projects*/
+
+.projects {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin: 50px;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.card img {
+    height: 270px;
+    width: 270px;
+}
+
+.card .info {
+    height: 165px;
+    width: 270px;
+    background-color: #9EB6DC;
+    border-radius: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    padding: 25px;
+    font-weight: bold;
+}
+
+.card a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    margin-left: 25px;
+    top: 50px;
+}
+
+.card a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+.card a:hover::before {
+    width: 100%;
+}
+
+.projects button {
+    background-color: #97CC04;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 25px;
+    height: 50px;
+    width: 200px;
+    transition: .3s;
+}
+
+.projects button:hover {
+    background-color: #9ed603;
+}
+
+/*Contact*/
+
+.contact {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+.contact input {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+}
+
+
+.contact button {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+}
+
 /*Footer*/
 
 footer {
@@ -177,9 +354,12 @@ hr {
     height: 5%;
 }
 
+footer .navbar{
+    margin-left: 3%;
+}
+
 .media{
     margin-bottom: 75px;
-    margin-right: 3%;
 }
 
 .media a {
