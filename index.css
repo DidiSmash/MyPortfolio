@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    transition: 0.3s;
 }
 
 body {
@@ -45,7 +46,6 @@ header {
 .navbar .logo {
     font-size: 32px;
     margin: 100px;
-    color: #000000;
     text-decoration: none;
     font-weight: 700;
 }
@@ -74,7 +74,7 @@ header {
 }
 
 .button {
-    background-color: #d2d2d2;
+    background-color: #ABC1E5;
     width: 50px;
     height: 25px;
     border-radius: 100px;
@@ -86,7 +86,7 @@ header {
 .button::before{
     position: absolute;
     content: '';
-    background-color: #fff;
+    background-color: #97CC04;
     width: 15px;
     height: 15px;
     border-radius: 100px;
@@ -94,15 +94,15 @@ header {
     transition: 0.2s;
 }
 
-input:checked + .button{
-    background-color: #20096d;
+.switcher input:checked + .button{
+    background-color: #420039;
 }
 
-input:checked + .button::before{
+.switcher input:checked + .button::before{
     transform: translateX(25px);
 }
 
-input {
+.switcher input {
     display: none;
 }
 
@@ -315,23 +315,100 @@ input {
 /*Contact*/
 
 .contact {
-    min-height: 50vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.containers {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.formContact {
     display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
+    height: auto;
+    width: 50%;
 }
 
-.contact input {
-    background-color: #fff;
-    height: 50px;
-    width: 50px;
+.formContact h2 {
+    padding: 25px;
 }
 
+.formulaire {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-.contact button {
-    background-color: #fff;
-    height: 50px;
-    width: 50px;
+.formulaire input {
+    margin: 10px;
+    padding: 10px;
+}
+
+.divInfo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.divInfo input {
+    width: 35%;
+    min-height: 50px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 3%;
+}
+
+.divComment {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.divComment textarea {
+    width: 80%;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 10px;
+    min-height: 200px;
+    resize: none;
+}
+
+.divSubmit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.divSubmit .submit {
+    background-color: #97CC04;
+    border-style: none;
+    border-radius: 10px;
+    width: 80%;
+    min-height: 50px;
+}
+
+.divSubmit .submit:hover {
+    background-color: #9ed603;
+}
+
+.rocket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.rocket img {
+height: 85%;
 }
 
 /*Footer*/
@@ -368,4 +445,85 @@ footer .navbar{
 
 .media a img {
     height: 50px;
+}
+
+
+/* ------- Dark Mode ------- */
+
+.dark {
+    background-color: #420039;
+    color: #FFFFFF;
+}
+
+.dark header, .dark footer{
+    background-color: #4C0343;
+}
+
+.dark header a, .dark footer a{
+    color: #FFFFFF;
+}
+
+.dark .navbar a::before{
+    background-color: #FFFFFF;
+}
+
+.dark .button::before{
+    background-color: #FB8B24;
+}
+
+.dark .welcomeMessage {
+    background-color: hsla(29, 96%, 56%, .4);
+}
+
+.dark button {
+    background-color: #FB8B24;
+}
+
+.dark button:hover {
+    background-color: #e67e1d;
+}
+
+.dark .submit {
+    background-color: #FB8B24;
+}
+
+.dark .submit:hover {
+    background-color: #e67e1d;
+}
+
+.dark .card .info {
+    background-color: #4C0343;
+}
+
+.dark .card .info a {
+    color: #FFFFFF;
+}
+
+.dark .card .info a::before{
+    background-color: #FFFFFF;
+}
+
+/* dark icons*/
+.darkGithub {
+    content: url("/img/github-dark.png");
+}
+
+.darkLinkedin {
+    content: url("/img/linkedin-dark.png");
+}
+
+.darkDiscord {
+    content: url("/img/discord-dark.png");
+}
+
+.darkWelcomeMessage {
+    content: url("https://readme-typing-svg.herokuapp.com?font=Fredoka&pause=1000&color=FFFFFFFF&random=false&width=435&lines=Hi+there+!+%F0%9F%91%8B;I'm+DidiSmash");
+}
+
+.darkIconMenu {
+    content: url("/img/UFO3D.png");
+}
+
+.darkIconContact {
+    content: url("/img/Planet3D.png");
 }

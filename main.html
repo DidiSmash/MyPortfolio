@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="functions.js"></script>
     <title>My Portfolio</title>
 </head>
 <body>
@@ -18,19 +19,19 @@
         </nav>
 
         <div class="switcher">
-            <input type="checkbox" id="check">
+            <input type="checkbox" id="check" onclick="myFunction()">
             <label for="check" class="button"></label>
         </div>
     </header>
 
     <div class="menu">
         <div class="welcomeMessage">
-            <img src="https://readme-typing-svg.herokuapp.com?font=Fredoka&pause=1000&color=000000&random=false&width=435&lines=Hi+there+!+%F0%9F%91%8B;I'm+DidiSmash" alt="Hello" />
+            <img src="https://readme-typing-svg.herokuapp.com?font=Fredoka&pause=1000&color=000000&random=false&width=435&lines=Hi+there+!+%F0%9F%91%8B;I'm+DidiSmash" id="WcmMessage" alt="Welcome Message" />
         </div>
         <h1>Fullstack Developer</h1>
         <h2>For the past 4 years, I've been developing small bots, websites, mobile<br>applications and little games in a wide range of languages.</h2>
         <button>Get started</button>
-        <img src="/img/Island3D.png" alt="Island on 3D">
+        <img src="/img/Island3D.png" alt="Island on 3D" id="iconMenu">
     </div>
 
     <div class="about">
@@ -93,28 +94,26 @@
     </div>
 
     <div class="contact">
-        <h2>Contact me</h2>
-        <div class="formContact">
-            <form action="" method="post">
-                <div>
-                    <label for="name">name</label>
-                    <input type="text" id="name" name="nom" required minlength="4" maxlength="8" size="10">
-                </div>
-                
-                <div>
-                    <label for="email">email</label>
-                    <input type="email" name="email">
-                </div>
-                
-                <div>
-                    <label for="message">message</label>
-                    <textarea name="commentaire" rows="5" cols="50" name="message"></textarea>
-                </div>
-
-                <div>
-                    <button type="submit" value="Envoyer">
-                </div>
-            </form>
+        <div class="containers">
+            <div class="formContact"> 
+                <h2>Contact me</h2>
+                <form action="#" method="post" class="formulaire">
+                    <div class="divInfo">
+                        <input type="text" name="nom" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="divComment">
+                        <textarea name="commentaire" rows="5" cols="50" name="message" class="comment" placeholder="Message"></textarea>
+                    </div>
+    
+                    <div class="divSubmit">
+                        <button type="submit" value="Envoyer" class="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="rocket">
+                <img src="/img/Rocket3D.png" alt="Rocket 3D" id="iconContact">
+            </div>
         </div>
     </div>
 
@@ -128,9 +127,9 @@
         </nav>
         <hr>
         <div class="media">
-            <a href="#"><img src="/img/discord.png" alt="Discord Logo"></a>
-            <a href="#"><img src="/img/github-dark.png" alt="GitHub Logo"></a>
-            <a href="#"><img src="/img/linkedin.png" alt="Linkedin Logo"></a>
+            <a href="#"><img src="/img/discord.png" alt="Discord Logo" id="discord"></a>
+            <a href="#"><img src="/img/github.png" alt="GitHub Logo" id="github"></a>
+            <a href="#"><img src="/img/linkedin.png" alt="Linkedin Logo" id="linkedin"></a>
         </div>
         <div class="credit">© All Rights Reserved | 2024 - DidiSmash</div>
     </footer>
