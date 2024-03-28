@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s;
+}
+
+body {
+    min-height: 150vh;
+    background-color: #ABC1E5;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #9EB6DC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Logo */
+
+.logo {
+    font-size: 32px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Nav Bar */
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.navbar .logo {
+    font-size: 32px;
+    margin: 100px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Switch mode button */
+
+.switcher {
+    padding: 15px;
+    display: flex;
+    justify-content: right;
+}
+
+.button {
+    background-color: #ABC1E5;
+    width: 50px;
+    height: 25px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: #97CC04;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.switcher input:checked + .button{
+    background-color: #420039;
+}
+
+.switcher input:checked + .button::before{
+    transform: translateX(25px);
+}
+
+.switcher input {
+    display: none;
+}
+
+/*Menu*/
+.menu {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcomeMessage {
+    margin-top: 50px;
+    margin-right: 200px;
+    background-color: hsla(76, 96%, 41%, .4);
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+.menu h1 {
+    text-align: center;
+    font-weight: medium;
+    padding: 25px;
+    font-size: 48px;
+}
+
+.menu h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.menu button {
+    background-color: #97CC04;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 25px;
+    height: 50px;
+    width: 200px;
+    transition: .3s;
+}
+
+.menu button:hover {
+    background-color: #9ed603;
+}
+
+.menu img {
+    width: 375px;
+}
+
+/*About*/
+
+.about {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about h2{
+    font-size: 32px;
+}
+
+.about p{
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+}
+
+/*Skills*/
+.skills {
+    min-height: 50vh;
+    padding: 250px;
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+}
+.icons img {
+    position: absolute;
+    height: 100px;
+}
+
+.icons #js {
+    left: 48%;
+    margin-top: -250px;
+}
+
+.icons #html {
+    left: 40%;
+    margin-top: -200px;
+}
+
+.icons #css {
+    left: 56%;
+    margin-top: -200px;
+}
+
+.icons #py {
+    left: 37%;
+    margin-top: -50px;
+}
+
+.icons #php {
+    left: 59%;
+    margin-top: -50px;
+}
+
+.icons #c {
+    left: 40%;
+    margin-top: 100px;
+    height: 125px;
+}
+
+.icons #sql {
+    left: 56%;
+    margin-top: 100px;
+}
+
+.icons #godot {
+    left: 48%;
+    margin-top: 150px;
+}
+
+/*Projects*/
+
+.projects {
+    min-height: 50vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin: 50px;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.card img {
+    height: 270px;
+    width: 270px;
+}
+
+.card .info {
+    height: 165px;
+    width: 270px;
+    background-color: #9EB6DC;
+    border-radius: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    padding: 25px;
+    font-weight: bold;
+}
+
+.card a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    margin-left: 25px;
+    top: 50px;
+}
+
+.card a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+.card a:hover::before {
+    width: 100%;
+}
+
+.projects button {
+    background-color: #97CC04;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 25px;
+    height: 50px;
+    width: 200px;
+    transition: .3s;
+}
+
+.projects button:hover {
+    background-color: #9ed603;
+}
+
+/*Contact*/
+
+.contact {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.containers {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.formContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 50%;
+}
+
+.formContact h2 {
+    padding: 25px;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formulaire input {
+    margin: 10px;
+    padding: 10px;
+}
+
+.divInfo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.divInfo input {
+    width: 35%;
+    min-height: 50px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 3%;
+}
+
+.divComment {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.divComment textarea {
+    width: 80%;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 10px;
+    min-height: 200px;
+    resize: none;
+}
+
+.divSubmit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.divSubmit .submit {
+    background-color: #97CC04;
+    border-style: none;
+    border-radius: 10px;
+    width: 80%;
+    min-height: 50px;
+}
+
+.divSubmit .submit:hover {
+    background-color: #9ed603;
+}
+
+.rocket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.rocket img {
+height: 85%;
+}
+
+/*Footer*/
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 100px;
+    background-color: #9EB6DC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+hr {
+    margin: 25px;
+    width: 90%;
+    height: 5%;
+}
+
+footer .navbar{
+    margin-left: 3%;
+}
+
+.media{
+    margin-bottom: 75px;
+}
+
+.media a {
+    margin: 25px;
+}
+
+.media a img {
+    height: 50px;
+}
+
+
+/* ------- Dark Mode ------- */
+
+.dark {
+    background-color: #420039;
+    color: #FFFFFF;
+}
+
+.dark header, .dark footer{
+    background-color: #4C0343;
+}
+
+.dark header a, .dark footer a{
+    color: #FFFFFF;
+}
+
+.dark .navbar a::before{
+    background-color: #FFFFFF;
+}
+
+.dark .button::before{
+    background-color: #FB8B24;
+}
+
+.dark .welcomeMessage {
+    background-color: hsla(29, 96%, 56%, .4);
+}
+
+.dark button {
+    background-color: #FB8B24;
+}
+
+.dark button:hover {
+    background-color: #e67e1d;
+}
+
+.dark .submit {
+    background-color: #FB8B24;
+}
+
+.dark .submit:hover {
+    background-color: #e67e1d;
+}
+
+.dark .card .info {
+    background-color: #4C0343;
+}
+
+.dark .card .info a {
+    color: #FFFFFF;
+}
+
+.dark .card .info a::before{
+    background-color: #FFFFFF;
+}
+
+/* dark icons*/
+.darkGithub {
+    content: url("http://localhost/MyPortfolioV2/img/github-dark.png");
+}
+
+.darkLinkedin {
+    content: url("http://localhost/MyPortfolioV2/img/linkedin-dark.png");
+}
+
+.darkDiscord {
+    content: url("http://localhost/MyPortfolioV2/img/discord-dark.png");
+}
+
+.darkWelcomeMessage {
+    content: url("https://readme-typing-svg.herokuapp.com?font=Fredoka&pause=1000&color=FFFFFFFF&random=false&width=435&lines=Hi+there+!+%F0%9F%91%8B;I'm+DidiSmash");
+}
+
+.darkIconMenu {
+    content: url("http://localhost/MyPortfolioV2/img/UFO3D.png");
+}
+
+.darkIconContact {
+    content: url("http://localhost/MyPortfolioV2/img/Planet3D.png");
+}
