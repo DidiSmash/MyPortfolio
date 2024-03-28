@@ -1,4 +1,4 @@
-function myFunction() {
+function toggleTheme() {
     let element = document.body;
     // icons
     let github = document.getElementById("github");

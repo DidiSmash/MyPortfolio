@@ -180,6 +180,7 @@ header {
 /*Skills*/
 .skills {
     min-height: 50vh;
+    padding: 250px;
     display: flex;
     font-size: 32px;
     align-items: center;
@@ -235,6 +236,7 @@ header {
 
 .projects {
     min-height: 50vh;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -505,15 +507,15 @@ footer .navbar{
 
 /* dark icons*/
 .darkGithub {
-    content: url("/img/github-dark.png");
+    content: url("http://localhost/MyPortfolioV2/img/github-dark.png");
 }
 
 .darkLinkedin {
-    content: url("/img/linkedin-dark.png");
+    content: url("http://localhost/MyPortfolioV2/img/linkedin-dark.png");
 }
 
 .darkDiscord {
-    content: url("/img/discord-dark.png");
+    content: url("http://localhost/MyPortfolioV2/img/discord-dark.png");
 }
 
 .darkWelcomeMessage {
@@ -521,9 +523,9 @@ footer .navbar{
 }
 
 .darkIconMenu {
-    content: url("/img/UFO3D.png");
+    content: url("http://localhost/MyPortfolioV2/img/UFO3D.png");
 }
 
 .darkIconContact {
-    content: url("/img/Planet3D.png");
+    content: url("http://localhost/MyPortfolioV2/img/Planet3D.png");
 }
