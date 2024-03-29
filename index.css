@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    transition: 0.3s;
 }
 
 body {
     min-height: 150vh;
     background-color: #ABC1E5;
+    transition: 0.3s;
 }
 
 header {
@@ -21,6 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: 0.3s;
 }
 
 /* Logo */
@@ -80,7 +81,6 @@ header {
     border-radius: 100px;
     cursor: pointer;
     position: relative;
-    transition: 0.2s;
 }
 
 .button::before{
@@ -146,7 +146,7 @@ header {
     margin: 25px;
     height: 50px;
     width: 200px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .menu button:hover {
@@ -307,7 +307,7 @@ header {
     margin: 25px;
     height: 50px;
     width: 200px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .projects button:hover {
@@ -395,6 +395,7 @@ header {
     border-radius: 10px;
     width: 80%;
     min-height: 50px;
+    transition: 0.3s;
 }
 
 .divSubmit .submit:hover {
@@ -424,6 +425,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.3s;
     z-index: 100;
 }
 
@@ -457,6 +459,10 @@ footer .navbar{
     color: #FFFFFF;
 }
 
+.dark h1, .dark h2, .dark p {
+    transition: none;
+}
+
 .dark header, .dark footer{
     background-color: #4C0343;
 }
@@ -467,10 +473,12 @@ footer .navbar{
 
 .dark .navbar a::before{
     background-color: #FFFFFF;
+    transition: 0.3s;
 }
 
 .dark .button::before{
     background-color: #FB8B24;
+    transition: 0.3s;
 }
 
 .dark .welcomeMessage {
@@ -503,6 +511,7 @@ footer .navbar{
 
 .dark .card .info a::before{
     background-color: #FFFFFF;
+    transition: 0.3s;
 }
 
 /* dark icons*/

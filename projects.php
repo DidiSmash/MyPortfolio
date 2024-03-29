@@ -8,6 +8,6 @@
     <title>My Portfolio</title>
 </head>
 <body>
-    
+    <?php echo "hello !";?>
 </body>
 </html>

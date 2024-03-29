@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="functions.js"></script>
+    <?php include 'function.inc.php'; ?>
     <title>My Portfolio</title>
 </head>
 <body>
@@ -57,21 +58,24 @@
         <h2>My Projects</h2>
 
         <div class="cards">
-            <div class="card">
-                <img src="http://localhost/MyPortfolioV2/img/Island3D.png" alt="portfolio">
-                <div class="info">
-                    <p>Portfolio</p>
-                    <a href="https://github.com/DidiSmash/MyPortfolio" target="_blank">See More ›</a>
-                </div>
-            </div>
+            <?php
+            
+            $argv = array();
+            $argv['src'] = 'http://localhost/MyPortfolioV2/img/Island3D.png';  
+            $argv['alt'] = "portfolio";
+            $argv['name'] = 'Portfolio';
+            $argv['href'] = "https://github.com/DidiSmash/MyPortfolio";
+            createCard($argv);
 
-            <div class="card" style="background-color:#f9cb9c">
-                <img src="http://localhost/MyPortfolioV2/img/TDGD-3DIcon.png" alt="portfolio">
-                <div class="info">
-                    <p>TDGD-3D</p>
-                    <a href="https://github.com/DidiSmash/TDGD-3D" target="_blank">See More ›</a>
-                </div>
-            </div>
+            $argv = array();
+            $argv['src'] = 'http://localhost/MyPortfolioV2/img/TDGD-3DIcon.png'; 
+            $argv['bg'] = '#f9cb9c';  
+            $argv['alt'] = "TDGD-3D";
+            $argv['name'] = 'TDGD-3D';
+            $argv['href'] = "https://github.com/DidiSmash/TDGD-3D";
+            createCard($argv);
+            
+            ?>
 
             <div class="card" style="background-color:#eaebe9">
                 <img src="http://localhost/MyPortfolioV2/img/logo_entIcon.png" alt="portfolio">
