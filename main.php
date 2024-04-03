@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script src="functions.js"></script>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
     <?php include 'function.inc.php'; ?>
     <title>My Portfolio</title>
 </head>
@@ -55,46 +55,55 @@
     </div>
 
     <div class="projects" id="projects">
-        <h2>My Projects</h2>
+        <h2 class='title'>My Projects</h2>
+        <div class="cards-container swiper">
+            <div class="cards-content">
+                <div class="cards swiper-wrapper">
+                    <?php
+                    $argv = array();
+                    $argv['src'] = 'http://localhost/MyPortfolioV2/img/Island3D.png';  
+                    $argv['bg'] = '#ABC1E5';
+                    $argv['alt'] = 'Portfolio';
+                    $argv['name'] = 'Portfolio';
+                    $argv['desc'] = "Mon portfolio";
+                    $argv['href'] = "https://github.com/DidiSmash/MyPortfolio";
+                    createCard($argv);
 
-        <div class="cards">
-            <?php
-            
-            $argv = array();
-            $argv['src'] = 'http://localhost/MyPortfolioV2/img/Island3D.png';  
-            $argv['alt'] = "portfolio";
-            $argv['name'] = 'Portfolio';
-            $argv['href'] = "https://github.com/DidiSmash/MyPortfolio";
-            createCard($argv);
-
-            $argv = array();
-            $argv['src'] = 'http://localhost/MyPortfolioV2/img/TDGD-3DIcon.png'; 
-            $argv['bg'] = '#f9cb9c';  
-            $argv['alt'] = "TDGD-3D";
-            $argv['name'] = 'TDGD-3D';
-            $argv['href'] = "https://github.com/DidiSmash/TDGD-3D";
-            createCard($argv);
-            
-            ?>
-
-            <div class="card" style="background-color:#eaebe9">
-                <img src="http://localhost/MyPortfolioV2/img/logo_entIcon.png" alt="portfolio">
-                <div class="info">
-                    <p>ENT Mobile</p>
-                    <a href="https://github.com/DidiSmash/FakENTMobile" target="_blank">See More ›</a>
+                    $argv = array();
+                    $argv['src'] = 'http://localhost/MyPortfolioV2/img/TDGD-3DIcon.png'; 
+                    $argv['bg'] = '#f9cb9c';  
+                    $argv['alt'] = 'TDGD-3D';
+                    $argv['name'] = 'TDGD-3D';
+                    $argv['desc'] = "Jeux 3D tower defense";
+                    $argv['href'] = "https://github.com/DidiSmash/TDGD-3D";
+                    createCard($argv);
+                    
+                    $argv = array();
+                    $argv['src'] = 'http://localhost/MyPortfolioV2/img/logo_entIcon.png'; 
+                    $argv['bg'] = '#eaebe9';  
+                    $argv['alt'] = 'ENT Mobile';
+                    $argv['name'] = 'ENT Mobile';
+                    $argv['desc'] = "Application mobile ressemblant a l'ENT à but de prévention";
+                    $argv['href'] = "https://github.com/DidiSmash/FakENTMobile";
+                    createCard($argv);
+                    
+                    $argv = array();
+                    $argv['src'] = 'http://localhost/MyPortfolioV2/img/EcoElecIcon.png'; 
+                    $argv['bg'] = '#ace597';  
+                    $argv['alt'] = 'EcoElec';
+                    $argv['name'] = 'EcoElec';
+                    $argv['desc'] = "Site de vente de produit reconditionné";
+                    $argv['href'] = "https://github.com/DidiSmash/EcoElec";
+                    createCard($argv);
+                    ?>
                 </div>
             </div>
-            
-            <div class="card" style="background-color:#ace597">
-                <img src="http://localhost/MyPortfolioV2/img/EcoElecIcon.png" alt="portfolio">
-                <div class="info">
-                    <p>EcoElec</p>
-                    <a href="https://github.com/DidiSmash/EcoElec" target="_blank">See More ›</a>
-                </div>
-            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+
         </div>
-
-        <button onclick="location.href='http://localhost/MyPortfolioV2/projects.php';">All Projects</button>
     </div>
 
     <div class="contact" id="contact">
@@ -137,4 +146,7 @@
         <div class="credit">© All Rights Reserved | 2024 - DidiSmash</div>
     </footer>
 </body>
+
+<script src="swiper-bundle.min.js"></script>
+<script src="functions.js"></script>
 </html>

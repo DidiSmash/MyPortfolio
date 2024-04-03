@@ -237,54 +237,93 @@ header {
 .projects {
     min-height: 50vh;
     padding: 100px;
+}
+
+.title {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 10px;
+}
+
+.cards-container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.cards-content{
+    margin: 0 60px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.card{
+    border-radius: 25px;
+    background-color: #9EB6DC;
+    border: solid 3px;
+}
+
+.image-content, .card-content{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 10px, 14px;
 }
 
-.projects h2 {
-    font-size: 32px;
-    margin: 50px;
+.image-content {
+    position: relative;
+    row-gap: 5px;
 }
 
-.cards {
-    display: flex;
+.card-content {
+    height: 63%;
 }
 
-.card {
-    border: 3px solid;
-    border-radius: 10px;
-    margin: 20px;
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
 }
 
-.card img {
-    height: 270px;
-    width: 270px;
+.card-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    padding: 3px;
 }
 
-.card .info {
-    height: 165px;
-    width: 270px;
-    background-color: #9EB6DC;
-    border-radius: 10px;
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-.card p {
-    font-size: 20px;
-    padding: 25px;
-    font-weight: bold;
+.name {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px 0 10px 0;
 }
 
-.card a {
+.description {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 0 20px 0;
+}
+
+.link {
     position: relative;
     color: #000000;
     text-decoration: none;
-    margin-left: 25px;
-    top: 50px;
+    margin: 20px 0 10px 0;
 }
 
-.card a::before {
+.link::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -295,23 +334,16 @@ header {
     transition: 0.3s;
 }
 
-.card a:hover::before {
+.link:hover::before {
     width: 100%;
 }
 
-.projects button {
-    background-color: #97CC04;
-    border-style: none;
-    border-radius: 5px;
-    font-size: 18px;
-    margin: 25px;
-    height: 50px;
-    width: 200px;
-    transition: 0.3s;
+.swiper-navBtn {
+    transition: .3s;
 }
 
-.projects button:hover {
-    background-color: #9ed603;
+.swiper-navBtn:hover {
+    color: #99bb3d;
 }
 
 /*Contact*/
@@ -501,15 +533,23 @@ footer .navbar{
     background-color: #e67e1d;
 }
 
-.dark .card .info {
+.dark .swiper-navBtn {
+    color: #e67e1d;
+}
+
+.dark .swiper-pagination-bullet-active {
+    background-color: #e67e1d;
+}
+
+.dark .card {
     background-color: #4C0343;
 }
 
-.dark .card .info a {
+.dark .link {
     color: #FFFFFF;
 }
 
-.dark .card .info a::before{
+.dark .link::before{
     background-color: #FFFFFF;
     transition: 0.3s;
 }
