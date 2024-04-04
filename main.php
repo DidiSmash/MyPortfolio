@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel='icon' href='http://localhost/MyPortfolioV2/img/Island3D.ico' id='favIcon'>
     <?php include 'function.inc.php'; ?>
     <title>My Portfolio</title>
 </head>

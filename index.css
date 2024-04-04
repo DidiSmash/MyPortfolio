@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
 
@@ -577,4 +578,8 @@ footer .navbar{
 
 .darkIconContact {
     content: url("http://localhost/MyPortfolioV2/img/Planet3D.png");
+}
+
+.darkFavIcon {
+    content: url("http://localhost/MyPortfolioV2/img/UFO3D.ico");
 }

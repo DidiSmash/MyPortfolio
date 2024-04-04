@@ -1,6 +1,7 @@
-function toggleTheme() {
+function toggleTheme() { // veille tecno | cv 
     let element = document.body;
     // icons
+    let favIcon = document.getElementById("favIcon");
     let github = document.getElementById("github");
     let discord = document.getElementById("discord");
     let linkedin = document.getElementById("linkedin");
@@ -10,6 +11,11 @@ function toggleTheme() {
     // class
     element.classList.toggle("dark");
     // class incons
+    if (favIcon.href != "http://localhost/MyPortfolioV2/img/UFO3D.ico"){
+      favIcon.href = "http://localhost/MyPortfolioV2/img/UFO3D.ico";
+    } else {
+      favIcon.href = "http://localhost/MyPortfolioV2/img/Island3D.ico";
+    }
     github.classList.toggle("darkGithub");
     discord.classList.toggle("darkDiscord");
     linkedin.classList.toggle("darkLinkedin");
