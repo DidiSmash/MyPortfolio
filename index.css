@@ -109,7 +109,7 @@ header {
 
 /*Menu*/
 .menu {
-    min-height: 700px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,35 +158,91 @@ header {
     width: 375px;
 }
 
-/*About*/
 
-.about {
+
+
+
+
+
+
+/*Information*/
+
+.info {
+    width: 100%;
     min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.about h2{
+.info h2{
+    text-align: center;
     font-size: 32px;
 }
 
-.about p{
-    text-align: center;
+.info p{
     padding: 25px;
     font-size: 18px;
 }
 
-/*Skills*/
-.skills {
-    min-height: 50vh;
-    padding: 250px;
+.navInfo {
+    list-style: none;
     display: flex;
-    font-size: 32px;
+    justify-content: space-between;
+    margin: 50px;
     align-items: center;
-    justify-content: center;
 }
+
+.navInfo button {
+    background-color: #97CC04;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 25px;
+    height: 50px;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.navInfo button:hover {
+    background-color: #9ed603;
+}
+
+.containerInfo {
+    min-height: 50vh;
+    display: block;
+}
+
+.containerInfo .divInfo {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+}
+
+.containerInfo #AboutMe {
+    display: block;
+}
+
+.containerInfo #Skills {
+    display: none;
+}
+
+.containerInfo #RoadMap {
+    display: none;
+}
+
+.containerInfo #Cv {
+    display: none;
+}
+
+#AboutMe p {
+    text-align: center;
+    font-size: 25px;
+}
+
+
+#Skills h2{
+    margin-top: 250px;
+}
+
+
 .icons img {
     position: absolute;
     height: 100px;
@@ -386,13 +442,13 @@ header {
     padding: 10px;
 }
 
-.divInfo {
+.formulaire .divInfo {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.divInfo input {
+.formulaire .divInfo input {
     width: 35%;
     min-height: 50px;
     border: 1px solid;

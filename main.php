@@ -14,7 +14,7 @@
         <a href="#" class="logo">MyPortfolio</a>
 
         <nav class="navbar">
-            <a href="#about">About</a>
+            <a href="#info">Informations</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contacts</a>
@@ -32,29 +32,48 @@
         </div>
         <h1>Fullstack Developer</h1>
         <h2>For the past 4 years, I've been developing small bots, websites, mobile<br>applications and little games in a wide range of languages.</h2>
-        <button onclick="location.href='#about';">Get started</button>
+        <button onclick="location.href='#info';">Get started</button>
         <img src="http://localhost/MyPortfolioV2/img/Island3D.png" alt="Island on 3D" id="iconMenu">
     </div>
 
-    <div class="about" id="about">
-        <h2>About me</h2>
-        <p>I'm a first-year BTS SIO student in Vienne. I've been developing small bots,<br>websites, mobile applications and little games in a variety of languages for the<br>past 4 years. I love the creativity and freedom of programming, and I'd like to<br>continue in this way in my professional career.</p>
-    </div>
 
-    <div class="skills" id="skills">
-        <h2>My Skills</h2>
-        <div class="icons">
-            <img src="http://localhost/MyPortfolioV2/img/jsIcon.png" alt="icon javascript" id="js">
-            <img src="http://localhost/MyPortfolioV2/img/htmlIcon.png" alt="icon html" id="html">
-            <img src="http://localhost/MyPortfolioV2/img/cssIcon.png" alt="icon css" id="css">
-            <img src="http://localhost/MyPortfolioV2/img/pythonIcon.png" alt="icon python" id="py">
-            <img src="http://localhost/MyPortfolioV2/img/phpIcon.png" alt="icon php" id="php">
-            <img src="http://localhost/MyPortfolioV2/img/cIcon.png" alt="icon c#" id="c">
-            <img src="http://localhost/MyPortfolioV2/img/sqlIcon.png" alt="icon sql" id="sql">
-            <img src="http://localhost/MyPortfolioV2/img/godotIcon.png" alt="icon godot" id="godot">
+
+
+
+
+
+    <div class="info" id="info">
+        <h2>Informations</h2>
+        <ul>
+            <li class="navInfo">
+                <button onclick='toggleInfo("aboutMe")'>About me</button>
+                <button onclick='toggleInfo("skills")'>Skills</button>
+                <button onclick='toggleInfo("roadMap")'>Road map</button>
+                <button onclick='toggleInfo("cv")'>Cv</button>
+            </li>
+        </ul>
+        <div class="containerInfo">
+            <div class="divInfo" id='AboutMe'>
+            <p>I'm a first-year BTS SIO student in Vienne. I've been developing small bots,<br>websites, mobile applications and little games in a variety of languages for the<br>past 4 years. I love the creativity and freedom of programming, and I'd like to<br>continue in this way in my professional career.</p>
+            </div>
+            <div class="divInfo" id='Skills'>
+            <h2>My Skills</h2>
+            <div class="icons">
+                <img src="http://localhost/MyPortfolioV2/img/jsIcon.png" alt="icon javascript" id="js">
+                <img src="http://localhost/MyPortfolioV2/img/htmlIcon.png" alt="icon html" id="html">
+                <img src="http://localhost/MyPortfolioV2/img/cssIcon.png" alt="icon css" id="css">
+                <img src="http://localhost/MyPortfolioV2/img/pythonIcon.png" alt="icon python" id="py">
+                <img src="http://localhost/MyPortfolioV2/img/phpIcon.png" alt="icon php" id="php">
+                <img src="http://localhost/MyPortfolioV2/img/cIcon.png" alt="icon c#" id="c">
+                <img src="http://localhost/MyPortfolioV2/img/sqlIcon.png" alt="icon sql" id="sql">
+                <img src="http://localhost/MyPortfolioV2/img/godotIcon.png" alt="icon godot" id="godot">
+            </div>
+            </div>
+            <div class="divInfo" id='RoadMap'></div>
+            <div class="divInfo" id='Cv'></div>
         </div>
     </div>
-
+    
     <div class="projects" id="projects">
         <h2 class='title'>My Projects</h2>
         <div class="cards-container swiper">
@@ -132,7 +151,7 @@
     </div>
     <footer>
         <nav class="navbar">
-            <a href="#about">About</a>
+            <a href="#info">Informations</a>
             <a href="#skills">Skills</a>
             <a href="#" class="logo">MyPortfolio</a>
             <a href="#projects">Projects</a>
